@@ -9,10 +9,10 @@ X = dataset.iloc[:, 4:7].values
 y = dataset.iloc[:, 1].values
 
 from sklearn.preprocessing import PolynomialFeatures
-poly_reg = PolynomialFeatures(degree=4)
+poly_reg = PolynomialFeatures(degree=3)
 X_poly = poly_reg.fit_transform(X)
 pol_reg = LinearRegression()
 pol_reg.fit(X_poly, y)
 
 
-print(pol_reg.predict(poly_reg.fit_transform([[1, 6, 1962]])))
+print(pol_reg.predict(poly_reg.fit_transform([[26, 12, 2019]])))
